@@ -1,0 +1,13 @@
+/* pages/setting/setting.wxss */
+.page {
+    padding: 15px;
+}
+.section {
+    display: flex;
+    align-items: center;
+}
+input {
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-left: 10px;
+}
