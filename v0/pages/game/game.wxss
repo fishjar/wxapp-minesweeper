@@ -1,23 +1,35 @@
 /* pages/game/game.wxss */
+.grids {
+    /*background: url('https://v2.yiheni.cn/static/images/beauty.png') no-repeat center;*/
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color: #ccc;
+    background-position: center;
+}
 .grid {
     display: flex;
 }
 .grid_cell {
     flex: 1;
-    background: #eee;
+    /*background: #eee;*/
     display: flex;
 }
 .card {
     background: #666;
     flex: 1;
-    margin: 1px;
+    /*margin: 1px;*/
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #eee;
 }
 .open {
-    background: #ddd;
+    background:none;
 }
 button {
     margin: 0 15px;
+}
+.card text {
+    text-shadow: 0 0 20rpx #FFF;
+    font-weight:bold;
 }

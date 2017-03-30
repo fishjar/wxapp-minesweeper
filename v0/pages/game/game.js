@@ -8,7 +8,24 @@ Page({
     start: false,
     touchStart:0,
     touchEnd:0,
-    height: 0
+    height: 0,
+    imgs:[
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj2LsBkAZ20VfywRQErBfb4Al5neDSfHahRM6yZxYnQJhg/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj11Je6ib22vrXsylXfUWzJj7NcDh3wnyrgjrkjWWjIHtgQ/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj1lKibQ6kQTfA0VXw0O0mZbglFqyGp0DicoicAzGLNicI1iaWA/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj3m1EjTKgv1z57ZXF62GmfMFv9UNiaY56U7v2kot3ictiatA/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj3PnVZfJPW2Yfys9kKw2Libp9d8PRQBqTfFibAnduDv3YWA/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj1Ozg82QicictUib7iaesuHFzsLpV9ibkA2kF0uWws9HfJJ3iaw/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj2oLPYwuI1VXnVUr8ogJI1IibU4S4soQ5MoEAWqESSVupQ/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj0KF4FCZPichD8VjP8iaB4zWr06FewZCWH3ibpnaibCibyialeg/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj2ByLMM8LtDO7KjCQKnJ5icU0w1jnhUWtHN0sh9ic2xxQxA/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj23iazNZ0VGWmLicnMicnlsAF2weia7n9iabU7xT2dN0wb6f3w/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj0fVkyic6DiavP5AzIN3kLpb2ibCOhBibvEI0X9dTv2D3M33A/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj3CyXbYBc7JA4BP08G38dnBoVaE3wicvlXd8ibhrfWxojaA/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj03dSxiaicTvHxqu85EbaxC76gtLs8I3iaY32yeHiaeg9I4WA/',
+      'https://shp.qpic.cn/bizmp/dDAko9k6Pj2QmAN2QjjE5XnNLiaPaibzuHOx0h0XoQ4tzcOYwALCGq8w/'
+    ],
+    gridsBg: 'https://v2.yiheni.cn/static/images/beauty.png'
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -54,7 +71,8 @@ Page({
       grids: grids,
       start: false,
       height: 750/x,
-      config: config
+      config: config,
+      gridsBg: this.data.imgs[Math.floor(Math.random()*this.data.imgs.length)]
     });
   },
   handleClick(e){
@@ -95,6 +113,7 @@ Page({
         success: function(res) {
           if (res.confirm) {
             that.setData({
+              gridsBg:'',
               cards: cards.map(function(item){
                 item.open = true;
                 return item;
